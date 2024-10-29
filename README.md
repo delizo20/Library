@@ -11,8 +11,8 @@ All endpoints except for `/user/register` and `/user/auth` require a JWT token p
 ## Endpoints
 
 ### User Registration
-**Endpoint**:  `127.0.0.1/library/public/user/register`
 **Method**: `POST`
+**Endpoint**:  `127.0.0.1/library/public/user/register`
 
 Registers a new user in the system.
 
@@ -25,8 +25,8 @@ Registers a new user in the system.
   }
 
 ### User Authentication
-**Endpoint**:  `127.0.0.1/library/public/auth`
 **Method:** `POST`
+**Endpoint**:  `127.0.0.1/library/public/auth`
 
 Authenticates a user and returns a JWT access token.
 
@@ -41,8 +41,8 @@ Authenticates a user and returns a JWT access token.
 
 ## Authors
 ### Add Author
-**Endpoint**:  `127.0.0.1/library/public/authors`
 **Method:** `POST`
+**Endpoint**:  `127.0.0.1/library/public/authors`
 
 Creates a new author in the library.
 
@@ -56,8 +56,8 @@ Creates a new author in the library.
   }
 
 ### Get All Author
-**Endpoint**:  `127.0.0.1/library/public/authors/get`
 **Method:** `GET`
+**Endpoint**:  `127.0.0.1/library/public/authors/get`
 
 Retrieves a list of all authors.
 
@@ -77,8 +77,8 @@ Retrieves a list of all authors.
   }
 
 ### Update Author
-**Endpoint**:  `127.0.0.1/library/public/authors/update/{1}`
 **Method:** `PUT`
+**Endpoint**:  `127.0.0.1/library/public/authors/update/{1}`
 
 Updates an author's details.
 
@@ -93,8 +93,8 @@ Updates an author's details.
   }
 
 ### Delete Author
-**Endpoint**:  `127.0.0.1/library/public/authors/delete/{1}`
 **Method:** `DELETE`
+**Endpoint**:  `127.0.0.1/library/public/authors/delete/{1}`
 
 Deletes an author.
 
@@ -109,8 +109,8 @@ Deletes an author.
 
 ## Books
 ### Add Book
-**Endpoint**:  `127.0.0.1/library/public/books`
 **Method:** `POST`
+**Endpoint**:  `127.0.0.1/library/public/books`
 
 Adds a new book to the library.
 
@@ -124,8 +124,8 @@ Adds a new book to the library.
   }
 
 ### Get All Books
-**Endpoint**:  `127.0.0.1/library/public/books/get`
 **Method:** `GET`
+**Endpoint**:  `127.0.0.1/library/public/books/get`
 
 Retrieves a list of all books.
 
@@ -146,8 +146,8 @@ Retrieves a list of all books.
   }
 
 ### Update Book
-**Endpoint**:  `127.0.0.1/library/public/books/update/{1}`
 **Method:** `PUT`
+**Endpoint**:  `127.0.0.1/library/public/books/update/{1}`
 
 Updates an book's details.
 
@@ -162,8 +162,8 @@ Updates an book's details.
   }
 
 ### Delete Book
-**Endpoint**:  `127.0.0.1/library/public/books/delete/{1}`
 **Method:** `DELETE`
+**Endpoint**:  `127.0.0.1/library/public/books/delete/{1}`
 
 Deletes an author.
 
