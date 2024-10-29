@@ -14,7 +14,7 @@ All endpoints except for `/user/register` and `/user/auth` require a JWT token p
 **Endpoint**:  `127.0.0.1/library/public/user/register`
 **Method**: `POST`
 
-####Registers a new user in the system.
+Registers a new user in the system.
 
 - **Body**:  `{ "username": "rDelizo", "password": "r123" }`
 - **Response**:
@@ -77,7 +77,7 @@ Retrieves a list of all authors.
   }
 
 ### Update Author
-**Endpoint**:  `127.0.0.1/library/public/update/{1}`
+**Endpoint**:  `127.0.0.1/library/public/authors/update/{1}`
 **Method:** `PUT`
 
 Updates an author's details.
@@ -104,5 +104,74 @@ Deletes an author.
   {
     "status": "success",
     "message": "Author deleted successfully",
+    "access_token": "new_jwt_token"
+  }
+
+## Books
+### Add Book
+**Endpoint**:  `127.0.0.1/library/public/books`
+**Method:** `POST`
+
+Adds a new book to the library.
+
+- **Body**:  `{ "title": "Book Title","author_id": 1, "token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Book created successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Get All Books
+**Endpoint**:  `127.0.0.1/library/public/books/get`
+**Method:** `GET`
+
+Retrieves a list of all books.
+
+- **Body**:  `{ "token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+  "message": "Books retrieved successfully",
+  "data": [
+    {
+      "bookid": 1,
+      "name": "A BEGINNER'S GUIDE TO THE STOCK MARKET"
+      "authorid": 1
+    }
+  ],
+  "access_token": "new_jwt_token"
+  }
+
+### Update Book
+**Endpoint**:  `127.0.0.1/library/public/books/update/{1}`
+**Method:** `PUT`
+
+Updates an book's details.
+
+- **Body**:  `{ "title": "STOCK MARKET","token": "your_jwt_token", "author_id": 1,
+}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Book updated successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Delete Book
+**Endpoint**:  `127.0.0.1/library/public/books/delete/{1}`
+**Method:** `DELETE`
+
+Deletes an author.
+
+- **Body**:  `{"token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Book deleted successfully",
     "access_token": "new_jwt_token"
   }
