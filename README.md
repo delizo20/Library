@@ -33,8 +33,8 @@ Authenticates a user and returns a JWT access token.
 - **Body**:  `{ "username": "rDelizo", "password": "r123" }`
 - **Response**:
   ```json
- { 
-  "status": "success",
-  "access_token": "your_jwt_token",
-  "data": null
- }  
+  {
+    "status": "success",
+    "data": null
+  }
+ 
