@@ -38,4 +38,71 @@ Authenticates a user and returns a JWT access token.
     "access_token": "your_jwt_token",
     "data": null
   }
- 
+
+## Authors
+### Add Author
+**Endpoint**:  `127.0.0.1/library/public/authors`
+**Method:** `POST`
+
+Creates a new author in the library.
+
+- **Body**:  `{ "name": "Rhuby Ann Delizo", "token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Author created successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Get All Author
+**Endpoint**:  `127.0.0.1/library/public/authors/get`
+**Method:** `GET`
+
+Retrieves a list of all authors.
+
+- **Body**:  `{ "token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+  "message": "Authors retrieved successfully",
+  "data": [
+    {
+      "authorid": 1,
+      "name": "R.Delizo"
+    }
+  ],
+  "access_token": "new_jwt_token"
+  }
+
+### Update Author
+**Endpoint**:  `127.0.0.1/library/public/update/{1}`
+**Method:** `PUT`
+
+Updates an author's details.
+
+- **Body**:  `{ "name": "R.A.Delizo","token": "your_jwt_token"
+}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Author updated successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Delete Author
+**Endpoint**:  `127.0.0.1/library/public/authors/delete/{1}`
+**Method:** `DELETE`
+
+Deletes an author.
+
+- **Body**:  `{"token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Author deleted successfully",
+    "access_token": "new_jwt_token"
+  }
