@@ -35,10 +35,11 @@ This API provides access to a library database, allowing for user authentication
 { 
 "username": "string", 
 "password": "string" 
+}'
+- **Body**: 
+```json
+{ 
+"username": "string", 
+"password": "string" 
 }
-- **Response**:
-  ```json
-  {
-    "status": "success",
-    "data": null
-  }
+
