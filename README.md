@@ -31,6 +31,7 @@ This API provides access to a library database, allowing for user authentication
 ### User Registration
 **Endpoint**: `POST /user/register`
 - **Body**: 
+```json
 `{ 
 "username": "string", 
 "password": "string" 
