@@ -35,6 +35,7 @@ Authenticates a user and returns a JWT access token.
   ```json
   {
     "status": "success",
+    "access_token": "your_jwt_token",
     "data": null
   }
  
