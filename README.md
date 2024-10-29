@@ -16,7 +16,11 @@ All endpoints except for `/user/register` and `/user/auth` require a JWT token p
 
 ### User Registration
 **Endpoint**: `POST /user/register`
-- **Body**: `{ "username": "string", "password": "string" }`
+- **Body**: 
+  { "username": "string", 
+    "password": "string" 
+  }
+
 - **Response**:
   ```json
   {
