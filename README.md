@@ -207,9 +207,9 @@ Retrieves all book-author relationships.
 - **Response**:
   ```json
   {
-    ""status": "success",
-  "message": "Relations retrieved successfully",
-  "data": [
+    "status": "success",
+    "message": "Relations retrieved successfully",
+    "data": [
     {
       "bookid": 1,
       "authorid": 1
