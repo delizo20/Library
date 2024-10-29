@@ -2,25 +2,6 @@
 
 This API provides access to a library database, allowing for user authentication and CRUD operations on authors, books, and their relationships.
 
-## Table of Contents
-Authentication
-User Registration
-User Authentication
-Authors
-Add Author
-Get All Authors
-Update Author
-Delete Author
-Books
-Add Book
-Get All Books
-Update Book
-Delete Book
-Book-Author Relationships
-Create Relationship
-Get All Relationships
-Delete Relationship
-
 ## Endpoints
 
 ## Authentication
