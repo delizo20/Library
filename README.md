@@ -42,6 +42,7 @@ Registers a new user in the system.
   "username": "rdelizo05852",
   "password": "passDelizo"
 }
+
 **Response:**
 ```json
 {
