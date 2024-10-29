@@ -11,3 +11,26 @@ This API allows users to manage a library database with users, authors, books, a
 ## Authentication
 
 All endpoints except for `/user/register` and `/user/auth` require a JWT token passed in the request body as `token`. On successful authentication, each request returns a new access token.
+
+### User Registration
+**Endpoint**: `POST /user/register`
+- **Body**: `{ "username": "string", "password": "string" }`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "data": null
+  }
+
+  User Authentication
+Endpoint: POST /user/auth
+
+Body: { "username": "string", "password": "string" }
+Response:
+  {
+  "status": "success",
+  "access_token": "jwt_token",
+  "data": null
+ }
+
+
