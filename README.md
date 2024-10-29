@@ -1,6 +1,8 @@
-# Library API Documentation
+# Library Management API
 
 This API provides access to a library database, allowing for user authentication and CRUD operations on authors, books, and their relationships.
+
+---
 
 ## Table of Contents
 
@@ -23,30 +25,19 @@ This API provides access to a library database, allowing for user authentication
   - [Delete Relationship](#delete-relationship)
 
 ---
-## Endpoints
 
 ## Authentication
 
-All endpoints except for `/user/register` and `/user/auth` require a JWT token passed in the request body as `token`. On successful authentication, each request returns a new access token.
-
 ### User Registration
 
-- **Endpoint:** `127.0.0.1/library/public/user/register`
+- **Endpoint:** `/user/register`
 - **Method:** `POST`
 
 Registers a new user in the system.
 
--**Request Body:**
-```json
-{
-  "username": "rdelizo05852",
-  "password": "passDelizo"
-}
-
--**Response:**
+**Request Body:**
 ```json
 {
   "username": "user1",
   "password": "pass123"
 }
-
