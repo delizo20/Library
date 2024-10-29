@@ -11,10 +11,10 @@ All endpoints except for `/user/register` and `/user/auth` require a JWT token p
 ## Endpoints
 
 ### User Registration
-**Endpoint:**  `127.0.0.1/library/public/user/register`
-**Method:** `POST`
+**Endpoint**:  `127.0.0.1/library/public/user/register`
+**Method**: `POST`
 
-Registers a new user in the system.
+####Registers a new user in the system.
 
 - **Body**:  `{ "username": "rDelizo", "password": "r123" }`
 - **Response**:
