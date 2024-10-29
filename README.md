@@ -42,9 +42,9 @@ Registers a new user in the system.
   "password": "pass123"
 }
 
-Response:
-```json
-{
-  "username": "user1",
-  "password": "pass123"
-}
+**Response**:
+  ```json
+  {
+    "status": "success",
+    "data": null
+  }
