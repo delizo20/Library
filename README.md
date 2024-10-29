@@ -1,45 +1,25 @@
-# Library Management API
+# Library API Documentation
 
-This API provides access to a library database, allowing for user authentication and CRUD operations on authors, books, and their relationships.
+This API allows users to manage a library database with users, authors, books, and book-author relationships. It also includes JWT-based authentication to secure specific endpoints.
 
----
-
-## Table of Contents
-
-- [Authentication](#authentication)
-  - [User Registration](#user-registration)
-  - [User Authentication](#user-authentication)
-- [Authors](#authors)
-  - [Add Author](#add-author)
-  - [Get All Authors](#get-all-authors)
-  - [Update Author](#update-author)
-  - [Delete Author](#delete-author)
-- [Books](#books)
-  - [Add Book](#add-book)
-  - [Get All Books](#get-all-books)
-  - [Update Book](#update-book)
-  - [Delete Book](#delete-book)
-- [Book-Author Relationships](#book-author-relationships)
-  - [Create Relationship](#create-relationship)
-  - [Get All Relationships](#get-all-relationships)
-  - [Delete Relationship](#delete-relationship)
-
----
+## Setup
+1. Clone the repository.
+2. Install dependencies using `composer install`.
+3. Configure database settings in the `$dbConfig` array.
+4. Run the application with `php -S localhost:8080`.
 
 ## Authentication
 
+All endpoints except for `/user/register` and `/user/auth` require a JWT token passed in the request body as `token`. On successful authentication, each request returns a new access token.
+
+## Endpoints
+
 ### User Registration
 **Endpoint**: `POST /user/register`
-- **Body**: 
-```json
-{ 
-"username": "string", 
-"password": "string" 
-}'
-- **Body**: 
-```json
-{ 
-"username": "string", 
-"password": "string" 
-}
-
+- **Body**: `{ "username": "string", "password": "string" }`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "data": null
+  }
