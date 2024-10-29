@@ -175,3 +175,73 @@ Deletes an author.
     "message": "Book deleted successfully",
     "access_token": "new_jwt_token"
   }
+
+## Book-Author Relationships
+### Create Relationship
+**Method:** `POST`
+**Endpoint**:  `127.0.0.1/library/public//books_authors`
+
+Creates a relationship between a book and an author.
+
+- **Body**:  `{
+  "book_id": 1,
+  "author_id": 1,
+  "token": "your_jwt_token"
+}
+`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Book-Author relation created successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Get All Books
+**Method:** `GET`
+**Endpoint**:  `127.0.0.1/library/public//books_authors/get`
+
+Retrieves all book-author relationships.
+
+- **Body**:  `{ "token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    ""status": "success",
+  "message": "Relations retrieved successfully",
+  "data": [
+    {
+      "bookid": 1,
+      "authorid": 1
+    }
+  ],
+  "access_token": "new_jwt_token"
+  }
+
+### Delete Relationship
+**Endpoint**: `127.0.0.1/library/publicbooks_authors/delete/{1}`
+**Method:** `PUT`
+
+Deletes a book-author relationship.
+
+- **Body**:  `{ ""token": "your_jwt_token"}`
+- **Response**:
+  ```json
+  {
+    "status": "success",
+    "message": "Relation deleted successfully",
+    "access_token": "new_jwt_token"
+  }
+
+### Error Handling
+If there is an error, the API returns a JSON response with the following format:
+
+- **Response**:
+  ```json
+  {
+  "status": "error",
+  "message": "Error message describing the issue."
+  }
+
+### Note
+The access_token should be included in the body of requests that require authentication, and a new token will be returned with each successful authenticated request.
