@@ -36,131 +36,17 @@ All endpoints except for `/user/register` and `/user/auth` require a JWT token p
 
 Registers a new user in the system.
 
-**Request Body:**
+-**Request Body:**
 ```json
 {
   "username": "rdelizo05852",
   "password": "passDelizo"
 }
 
-**Response:**
+-**Response:**
 ```json
 {
-  "status": "success",
-  "data": null
+  "username": "user1",
+  "password": "pass123"
 }
-
-### User Authentication
-
-- **Endpoint:** `127.0.0.1/library/public/user/auth`
-- **Method:** `POST`
-
-Authenticates a user and returns a JWT access token.
-
-**Request Body:**
-```json
-{
-  "username": "rdelizo05852",
-  "password": "passDelizo"
-}
-**Response:**
-```json
-{
-  "status": "success",
-  "access_token": "your_jwt_token",
-  "data": null
-}
-
-## Authors
-### Add Author
-- **Endpoint:** `127.0.0.1/library/public/authors`
-- **Method:** `POST`
-
-Creates a new author in the library.
-
-**Request Body:**
-```json
-{
-  "name": "R.Delizo",
-  "token": "your_jwt_token"
-}
-**Response:**
-```json
-{
-  "status": "success",
-  "message": "Author created successfully",
-  "access_token": "new_jwt_token"
-}
-
-### Get All Authors
-- **Endpoint:** `127.0.0.1/library/public/authors/get`
-- **Method:** `GET`
-
-Retrieves a list of all authors.
-
-**Request Body:**
-```json
-{
-  "token": "your_jwt_token"
-}
-**Response:**
-```json
-{
-  "status": "success",
-  "message": "Authors retrieved successfully",
-  "data": [
-    {
-      "authorid": 1,
-      "name": "R.Delizo"
-    }
-  ],
-  "access_token": "new_jwt_token"
-}
-
-
-### Update Author
-- **Endpoint:** `127.0.0.1/library/public/update/{1}`
-- **Method:** `PUT`
-
-Updates an author's details.
-
-**Request Body:**
-```json
-{
-  "name": "R.Delizo",
-  "token": "your_jwt_token"
-}
-**Response:**
-```json
-{
-  "status": "success",
-  "message": "Author updated successfully",
-  "access_token": "new_jwt_token"
-}
-
-### Delete Author
-- **Endpoint:** `127.0.0.1/library/public/authors/delete/{1}`
-- **Method:** `DELETE`
-
-Deletes an author.
-
-**Request Body:**
-```json
-{
-  "token": "your_jwt_token"
-}
-
-**Response:**
-```json
-{
-  "status": "success",
-  "message": "Author deleted successfully",
-  "access_token": "new_jwt_token"
-}
-
-
-
-
-
-
 
