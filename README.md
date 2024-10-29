@@ -29,20 +29,13 @@ This API provides access to a library database, allowing for user authentication
 ## Authentication
 
 ### User Registration
-
-- **Endpoint:** `/user/register`
-- **Method:** `POST`
-
-Registers a new user in the system.
-
-**Request Body:**
-```json
-{
-  "username": "user1",
-  "password": "pass123"
-}
-
-**Response**:
+**Endpoint**: `POST /user/register`
+- **Body**: 
+`{ 
+"username": "string", 
+"password": "string" 
+}`
+- **Response**:
   ```json
   {
     "status": "success",
